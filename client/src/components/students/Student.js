@@ -31,9 +31,10 @@ export class Students extends Component {
       const regex = new RegExp(`${text}`, "gi");
       return student.name.match(regex) || student.email.match(regex);
     });
+    this.setState({ students: filtered });
   };
   onChange = e => {
-    if (this.refs.text.value !== " ") {
+    if (this.refs.value !== " ") {
       this.filterStudents(e.target.value);
     } else {
       this.getStudents();
