@@ -51,7 +51,7 @@ export class EditStudent extends Component {
         <NavLink to="/" className="btn btn-light">
           Back
         </NavLink>
-        <h1 className="text-primary text-center">Add student Details</h1>
+        <h1 className="text-primary text-center">Edit student Details</h1>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label className="name">Name</label>
@@ -86,7 +86,7 @@ export class EditStudent extends Component {
           <input
             type="submit"
             value="Save Details"
-            className="btn btn-primary btn-dark"
+            className="btn btn-primary btn-block"
           />
         </form>
       </div>
