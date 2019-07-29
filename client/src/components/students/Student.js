@@ -12,7 +12,7 @@ export class Students extends Component {
   }
   getStudents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/students");
+      const res = await axios.get("/api/students");
       this.setState({ students: res.data });
     } catch (error) {
       console.error(error.message);
@@ -20,7 +20,7 @@ export class Students extends Component {
   };
   onDelete = async id => {
     try {
-      await axios.delete(`http://localhost:5000/api/students/${id}`);
+      await axios.delete(`/api/students/${id}`);
       this.getStudents();
     } catch (err) {
       console.log(err);
