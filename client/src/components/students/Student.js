@@ -75,7 +75,7 @@ export class Students extends Component {
         <h1 className="text-primary text-center">Students Details</h1>
         {students.length > 0 ? (
           <Fragment>
-            <div className="gird-3">
+            <div className="grid-3">
               {students.map(student => (
                 <StudentItem
                   key={student._id}
