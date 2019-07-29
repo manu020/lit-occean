@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h1>About this app</h1>
       <p className="my-1">
-        This is full stack react app for fo Student details
+        This is a full stack react app for Student details!!!
       </p>
       <p className="bg-dark p">
         <strong>Version:</strong>1.0.0

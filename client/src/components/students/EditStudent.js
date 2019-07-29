@@ -28,6 +28,7 @@ export class EditStudent extends Component {
     let editStudentId = this.props.match.params.id;
     try {
       await axios.put(`/api/students/${editStudentId}`, updatedStudent);
+      this.props.history.push("/");
     } catch (error) {
       console.error(error.message);
     }
