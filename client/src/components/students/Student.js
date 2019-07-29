@@ -28,17 +28,17 @@ export class Students extends Component {
   };
   filterStudents = text => {
     const filtered = this.state.students.filter(student => {
-      const regex = new.RegExp(`${text}`, "gi");
-      return student.name.match(regex) ||student.email.match(regex);
+      const regex = new RegExp(`${text}`, "gi");
+      return student.name.match(regex) || student.email.match(regex);
     });
   };
   onChange = e => {
-    if(this.refs.text.value !== " "){
+    if (this.refs.text.value !== " ") {
       this.filterStudents(e.target.value);
-  }else {
-    this.getStudents();
-  }
-};
+    } else {
+      this.getStudents();
+    }
+  };
   render() {
     const { students } = this.state;
 
