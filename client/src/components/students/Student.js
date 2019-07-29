@@ -26,7 +26,19 @@ export class Students extends Component {
       console.log(err);
     }
   };
-
+  filterStudents = text => {
+    const filtered = this.state.students.filter(student => {
+      const regex = new.RegExp(`${text}`, "gi");
+      return student.name.match(regex) ||student.email.match(regex);
+    });
+  };
+  onChange = e => {
+    if(this.refs.text.value !== " "){
+      this.filterStudents(e.target.value);
+  }else {
+    this.getStudents();
+  }
+};
   render() {
     const { students } = this.state;
 
@@ -75,6 +87,15 @@ export class Students extends Component {
         <h1 className="text-primary text-center">Students Details</h1>
         {students.length > 0 ? (
           <Fragment>
+            <form>
+              {" "}
+              <input
+                ref="text"
+                type="text"
+                placeholder="Filter Students"
+                onChange={this.onChange}
+              />
+            </form>
             <div className="grid-3">
               {students.map(student => (
                 <StudentItem
