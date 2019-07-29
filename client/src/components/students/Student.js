@@ -31,29 +31,59 @@ export class Students extends Component {
     const { students } = this.state;
 
     return (
+      // <div>
+      //   <h1 className="text-primary text-center">Students Details</h1>
+      //   {students.length > 0 ? (
+      //     <Fragment>
+      //       <table className="table table-bordered">
+      //         <tbody>
+      //           <tr>
+      //             <th>Id</th>
+      //             <th>Name</th>
+      //             <th>Age</th>
+      //             <th>Email</th>
+      //             <th>Edit</th>
+      //             <th>Delete</th>
+      //           </tr>
+      //           {students.map(student => (
+      //             <StudentItem
+      //               key={student._id}
+      //               student={student}
+      //               onDelete={this.onDelete}
+      //             />
+      //           ))}
+      //         </tbody>
+      //       </table>
+      //       <br />
+      //       <NavLink to="/students/add" className="btn btn-primary btn-block">
+      //         <i className="fas fa-user-plus" />
+      //         Add student
+      //       </NavLink>
+      //     </Fragment>
+      //   ) : (
+      //     <Fragment>
+      //       <p className="lead">No students records..!! Add one</p>
+      //       <NavLink to="/students/add" className="btn btn-primary btn-block">
+      //         <i className="fas fa-user-plus" />
+      //         Add student
+      //       </NavLink>
+      //     </Fragment>
+      //   )}
+      // </div>
+
       <div>
         <h1 className="text-primary text-center">Students Details</h1>
         {students.length > 0 ? (
           <Fragment>
-            <table className="table table-bordered">
-              <tbody>
-                <tr>
-                  <th>Id</th>
-                  <th>Name</th>
-                  <th>Age</th>
-                  <th>Email</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-                {students.map(student => (
-                  <StudentItem
-                    key={student._id}
-                    student={student}
-                    onDelete={this.onDelete}
-                  />
-                ))}
-              </tbody>
-            </table>
+            <div className="gird-3">
+              {students.map(student => (
+                <StudentItem
+                  key={student._id}
+                  student={student}
+                  onDelete={this.onDelete}
+                />
+              ))}
+            </div>
             <br />
             <NavLink to="/students/add" className="btn btn-primary btn-block">
               <i className="fas fa-user-plus" />
