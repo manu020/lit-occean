@@ -24,13 +24,13 @@ const App = () => {
             <Route exact path="/students/add" component={AddStudent} />
             <Route exact path="/students/edit/:id" component={EditStudent} />
           </Switch>
-          <NavLink
-            to="/students/add"
-            className="btn-floating btn-large waves-effect waves-light red"
-          >
-            <i className="material-icons" />
-          </NavLink>
         </div>
+        <NavLink
+          to="/students/add"
+          className="btn-floating btn-large waves-effect waves-light red"
+        >
+          <i className="material-icons">Add</i>
+        </NavLink>
       </Fragment>
     </Router>
   );
