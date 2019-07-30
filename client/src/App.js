@@ -29,7 +29,7 @@ const App = () => {
           to="/students/add"
           className="btn-floating btn-large waves-effect waves-light red"
         >
-          <i className="material-icons">Add</i>
+          <i className="material-icons" />
         </NavLink>
       </Fragment>
     </Router>
