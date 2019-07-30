@@ -14,7 +14,7 @@ export class EditStudent extends Component {
   getStudentDetails = async () => {
     let editStudentId = this.props.match.params.id;
     try {
-      const res = await axios.get(`/api/students/${editStudentId}`);
+      const res = await axios.put(`/api/students/${editStudentId}`);
       this.setState({
         name: res.data.name,
         age: res.data.age,
