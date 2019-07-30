@@ -1,6 +1,11 @@
 import React, { Fragment } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink
+} from "react-router-dom";
 import Students from "./components/students/Student";
 import AddStudent from "./components/students/AddStudent";
 import EditStudent from "./components/students/EditStudent";
@@ -19,6 +24,12 @@ const App = () => {
             <Route exact path="/students/add" component={AddStudent} />
             <Route exact path="/students/edit/:id" component={EditStudent} />
           </Switch>
+          <NavLink
+            to="/students/add"
+            className="btn-floating btn-large waves-effect waves-light red"
+          >
+            <i className="material-icons">add</i>
+          </NavLink>
         </div>
       </Fragment>
     </Router>
