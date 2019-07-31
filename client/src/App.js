@@ -28,7 +28,7 @@ const App = () => {
             to="/students/add"
             className="btn-floating btn-large waves-effect waves-light red"
           >
-            <i className="material-icons"> </i>
+            <i class="material-icons">add</i>
           </NavLink>
         </div>
       </Fragment>
