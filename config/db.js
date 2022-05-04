@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const db =
-  "mongodb+srv://root:root@studentdetails-h2ylb.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb+srv://root:root@studentdetails.h2ylb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  //mongodb+srv://root:<password>@studentdetails.h2ylb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
